@@ -6,7 +6,7 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 18:26:31 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/02/26 18:10:25 by jvaquer          ###   ########.fr       */
+/*   Updated: 2020/02/26 18:16:11 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,16 +98,16 @@ void	PhoneBook::ft_search(PhoneBook book[], const int i)
 	{
 		getline(std::cin, buf);
 		input = buf[0] - '0';
-		std::cout << found[input].first_name << std::endl;
-		std::cout << found[input].last_name << std::endl;
-		std::cout << found[input].nickname << std::endl;
-		std::cout << found[input].login << std::endl;
-		std::cout << found[input].postal_address;
-		std::cout << found[input].mail;
-		std::cout << found[input].phone;
-		std::cout << found[input].birth;
-		std::cout << found[input].meal;
-		std::cout << found[input].underwear;
-		std::cout << found[input].dark;
+		std::cout << "Name:            " << found[input].first_name << std::endl;
+		std::cout << "Last name:       " << found[input].last_name << std::endl;
+		std::cout << "Nickname:        " << found[input].nickname << std::endl;
+		std::cout << "Login:           " << found[input].login << std::endl;
+		std::cout << "Postal Address:  " << found[input].postal_address << std::endl;
+		std::cout << "E-mail:          " << found[input].mail << std::endl;
+		std::cout << "Phone number     " << found[input].phone << std::endl;
+		std::cout << "Birth date:      " << found[input].birth << std::endl;
+		std::cout << "Favorite meal    " << found[input].meal << std::endl;
+		std::cout << "Underwear color: " << found[input].underwear << std::endl;
+		std::cout << "Darkest secret:  " << found[input].dark << std::endl;
 	}
 }
