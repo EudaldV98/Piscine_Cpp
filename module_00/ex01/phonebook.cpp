@@ -6,7 +6,7 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 18:26:31 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/02/26 18:16:11 by jvaquer          ###   ########.fr       */
+/*   Updated: 2020/02/26 18:16:38 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	PhoneBook::ft_add()
 	getline(std::cin, this->nickname);
 	std::cout << "What's your login?" << std::endl;
 	getline(std::cin, this->login);
-/*	std::cout << "What's your Postal address?" << std::endl;
+	std::cout << "What's your Postal address?" << std::endl;
 	getline(std::cin, this->postal_address);
 	std::cout << "What's your e-mail address?" << std::endl;
 	getline(std::cin, this->mail);
@@ -35,7 +35,7 @@ void	PhoneBook::ft_add()
 	std::cout << "What's your underwear color?" << std::endl;
 	getline(std::cin, this->underwear);
 	std::cout << "What's your darkest secret?" << std::endl;
-	getline(std::cin, this->dark);*/
+	getline(std::cin, this->dark);
 }
 
 void	ft_print_data(std::string toPrint)
