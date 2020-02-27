@@ -1,32 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Pony.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/25 17:54:29 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/02/25 17:58:51 by jvaquer          ###   ########.fr       */
+/*   Created: 2020/02/27 14:04:35 by jvaquer           #+#    #+#             */
+/*   Updated: 2020/02/27 17:40:54 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <time.h>
 
-int		main(int ac, char **av)
+class Pony
 {
-	int		i;
-	int		k;
+	private:
 
-	if (ac == 1)
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
-	i = 1;
-	while (i < ac)
-	{
-		k = -1;
-		while (av[i][k++])
-			std::cout << (char)toupper(av[i][k]);
-		i++;	
-	}
-	std::cout << std::endl;
-	return 0;
-}
+		int			hp;
+		int			lvl;
+		int			dmg;
+		int			def;
+
+	public:
+
+		int			age;
+		int			height;
+		int			weight;
+		std::string	name;
+		Pony(int a, int h, int w, std::string n);
+		void	print_stats();
+		void	print_data();
+		void	attack(Pony &target);
+		void	upgrade();
+		~Pony();
+};
