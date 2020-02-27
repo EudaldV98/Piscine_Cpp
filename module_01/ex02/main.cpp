@@ -1,37 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/27 14:04:35 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/02/27 18:49:35 by jvaquer          ###   ########.fr       */
+/*   Created: 2020/02/27 18:20:12 by jvaquer           #+#    #+#             */
+/*   Updated: 2020/02/27 19:11:52 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <time.h>
+#include "ZombieEvent.hpp"
 
-class Pony
+int     main()
 {
-	private:
+    Zombie z("Charles", "LOL");
+    ZombieEvent event;
+    z.advert();
 
-		int			hp;
-		int			lvl;
-		int			dmg;
-		int			def;
+    Zombie  *z2;
 
-	public:
-
-		int			age;
-		int			height;
-		int			weight;
-		std::string	name;
-		Pony(int _age, int _height, int _weight, std::string _name);
-		void	print_stats();
-		void	print_data();
-		void	attack(Pony &target);
-		void	upgrade();
-		~Pony();
-};
+    z2 = event.newZombie("Eudald");
+    z2->advert();
+    delete z2;
+    return 0;
+}

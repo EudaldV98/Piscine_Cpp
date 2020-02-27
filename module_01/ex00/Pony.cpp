@@ -6,18 +6,18 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 14:03:55 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/02/27 17:40:02 by jvaquer          ###   ########.fr       */
+/*   Updated: 2020/02/27 18:49:16 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Pony.hpp"
 
-Pony::Pony(int a, int h, int w, std::string n)
+Pony::Pony(int _age, int _height, int _weight, std::string _name)
 {
-	age = a;
-	height = h;
-	weight = w;
-	name = n;
+	age = _age;
+	height = _height;
+	weight = _weight;
+	name = _name;
 	hp = 50;
 	lvl = 1;
 	dmg = 5;
