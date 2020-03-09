@@ -6,7 +6,7 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 18:20:33 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/02/27 19:04:02 by jvaquer          ###   ########.fr       */
+/*   Updated: 2020/02/29 11:29:08 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,6 @@ class ZombieEvent
 	public:
 		ZombieEvent(/* args */);
 		Zombie*	newZombie(std::string name);
+		Zombie* randomChump();
 		~ZombieEvent();
 };
