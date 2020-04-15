@@ -1,28 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ZombieEvent.cpp                                    :+:      :+:    :+:   */
+/*   ZombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/27 18:20:28 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/04/15 13:55:39 by jvaquer          ###   ########.fr       */
+/*   Created: 2020/04/15 13:23:49 by jvaquer           #+#    #+#             */
+/*   Updated: 2020/04/15 14:15:15 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ZombieEvent.hpp"
-#include <random>
-#include <string>
-
-ZombieEvent::ZombieEvent(std::string type)
-{
-	_type = type;
-}
-
-Zombie	*ZombieEvent::newZombie(std::string name)
-{
-	return new Zombie(name, this->_type);
-}
+#include "ZombieHorde.hpp"
 
 std::string	random_str()
 {
@@ -31,17 +19,21 @@ std::string	random_str()
 	return (names[rand() % 5]);
 }
 
-void	ZombieEvent::randomChump()
+ZombieHorde::ZombieHorde(const int n) : _n(n)
 {
-	Zombie z(random_str(), this->_type);
-	z.advert();
+    _zombies = new Zombie[n];
+    for (size_t i = 0; i < n; i++)
+        _zombies[i] = Zombie(random_str(), "Horde Z");
+    
 }
 
-void	ZombieEvent::setZombieType(std::string type)
+void    ZombieHorde::announce()
 {
-	_type = type;
+    for (size_t i = 0; i < _n; i++)
+        _zombies[i].advert();
 }
 
-ZombieEvent::~ZombieEvent()
+ZombieHorde::~ZombieHorde()
 {
+    delete[] _zombies;
 }

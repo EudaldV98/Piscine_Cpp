@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   ZombieHorde.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/27 18:20:17 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/04/15 14:18:02 by jvaquer          ###   ########.fr       */
+/*   Created: 2020/04/15 13:23:42 by jvaquer           #+#    #+#             */
+/*   Updated: 2020/04/15 14:12:58 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <iostream>
 #include "Zombie.hpp"
-
-Zombie::Zombie(std::string _name, std::string _type)
+class ZombieHorde
 {
-	name = _name;
-	type = _type;
-	std::cout << "Object created.\n" << std::endl;
-}
-
-void	Zombie::advert()
-{
-	std::cout << '<' << this->name << " (" << this->type << ")>  Braiiiiiiinnnssss ....\n" << std::endl;
-}
-
-Zombie::~Zombie()
-{
-	std::cout << "Object destroyed.\n" << std::endl;
-}
+private:
+	int		_n;
+	Zombie	*_zombies;
+public:
+	ZombieHorde(const int n);
+	void	announce(void);
+	~ZombieHorde();
+};
