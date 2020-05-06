@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/27 18:20:17 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/04/22 20:15:54 by jvaquer          ###   ########.fr       */
+/*   Created: 2020/04/25 10:14:46 by jvaquer           #+#    #+#             */
+/*   Updated: 2020/04/27 23:38:25 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef WEAPON_HPP
+# define WEAPON_HPP
 
-Zombie::Zombie(std::string _name, std::string _type)
-{
-	name = _name;
-	type = _type;
-	std::cout << "Object created.\n" << std::endl;
-}
+#include <string>
 
-void	Zombie::announce()
+class Weapon
 {
-	std::cout << '<' << this->name << " (" << this->type << ")>  Braiiiiiiinnnssss ....\n" << std::endl;
-}
+	private:
+		std::string	type;
+	public:
+		Weapon(std::string type);
+		const std::string &getType() const;
+		void setType(std::string type);
+		~Weapon();
+};
 
-Zombie::~Zombie()
-{
-	std::cout << "Object destroyed.\n" << std::endl;
-}
+#endif

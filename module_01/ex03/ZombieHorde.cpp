@@ -6,7 +6,7 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/15 13:23:49 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/04/15 14:15:15 by jvaquer          ###   ########.fr       */
+/*   Updated: 2020/04/22 20:15:21 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ ZombieHorde::ZombieHorde(const int n) : _n(n)
 void    ZombieHorde::announce()
 {
     for (size_t i = 0; i < _n; i++)
-        _zombies[i].advert();
+        _zombies[i].announce();
 }
 
 ZombieHorde::~ZombieHorde()

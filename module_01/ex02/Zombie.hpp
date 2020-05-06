@@ -6,7 +6,7 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 18:20:23 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/04/15 14:02:27 by jvaquer          ###   ########.fr       */
+/*   Updated: 2020/04/22 20:16:03 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ class Zombie
 		std::string	name;
 		std::string	type;
 		Zombie(std::string _name, std::string _type);
-		void	advert();
+		void	announce();
 		~Zombie();
 };

@@ -6,7 +6,7 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 18:20:28 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/04/15 13:55:39 by jvaquer          ###   ########.fr       */
+/*   Updated: 2020/04/22 20:16:11 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ std::string	random_str()
 void	ZombieEvent::randomChump()
 {
 	Zombie z(random_str(), this->_type);
-	z.advert();
+	z.announce();
 }
 
 void	ZombieEvent::setZombieType(std::string type)

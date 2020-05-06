@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/27 18:20:17 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/04/22 20:15:54 by jvaquer          ###   ########.fr       */
+/*   Created: 2020/04/21 23:47:22 by jvaquer           #+#    #+#             */
+/*   Updated: 2020/04/23 23:52:26 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include <iostream>
+#include "Brain.hpp"
+#include <sstream>
 
-Zombie::Zombie(std::string _name, std::string _type)
+Brain::Brain()
 {
-	name = _name;
-	type = _type;
-	std::cout << "Object created.\n" << std::endl;
 }
 
-void	Zombie::announce()
+void		Brain::generateIdea() const
 {
-	std::cout << '<' << this->name << " (" << this->type << ")>  Braiiiiiiinnnssss ....\n" << std::endl;
+	std::cout << "How about drinking upside down?" << std::endl;
 }
 
-Zombie::~Zombie()
+std::string	Brain::identify() const
 {
-	std::cout << "Object destroyed.\n" << std::endl;
+	std::stringstream output;
+	output << std::hex << std::showbase << this;
+	return output.str();
+}
+
+Brain::~Brain()
+{
 }

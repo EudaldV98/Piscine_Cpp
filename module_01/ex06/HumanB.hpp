@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/27 18:20:17 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/04/22 20:15:54 by jvaquer          ###   ########.fr       */
+/*   Created: 2020/04/27 11:49:47 by jvaquer           #+#    #+#             */
+/*   Updated: 2020/04/27 23:49:57 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef HUMANB_HPP
+# define HUMANB_HPP
 
-Zombie::Zombie(std::string _name, std::string _type)
-{
-	name = _name;
-	type = _type;
-	std::cout << "Object created.\n" << std::endl;
-}
+#include "Weapon.hpp"
+#include <string>
 
-void	Zombie::announce()
+class HumanB
 {
-	std::cout << '<' << this->name << " (" << this->type << ")>  Braiiiiiiinnnssss ....\n" << std::endl;
-}
+	private:
+		std::string	name;
+		Weapon	*weapon;
 
-Zombie::~Zombie()
-{
-	std::cout << "Object destroyed.\n" << std::endl;
-}
+	public:
+		HumanB(std::string name, Weapon Weapon);
+		HumanB(std::string name);
+		std::string	getName() const;
+		void	setName(std::string name);
+		void	setWeapon(Weapon &new_weapon);
+		void	attack() const;
+		~HumanB();
+};
+
+#endif

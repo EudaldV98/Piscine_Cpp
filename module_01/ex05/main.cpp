@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/27 18:20:17 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/04/22 20:15:54 by jvaquer          ###   ########.fr       */
+/*   Created: 2020/04/21 20:49:21 by jvaquer           #+#    #+#             */
+/*   Updated: 2020/04/24 00:04:26 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Human.hpp"
+#include <iostream>
 
-Zombie::Zombie(std::string _name, std::string _type)
+int main()
 {
-	name = _name;
-	type = _type;
-	std::cout << "Object created.\n" << std::endl;
-}
+	Human Bob;
 
-void	Zombie::announce()
-{
-	std::cout << '<' << this->name << " (" << this->type << ")>  Braiiiiiiinnnssss ....\n" << std::endl;
-}
-
-Zombie::~Zombie()
-{
-	std::cout << "Object destroyed.\n" << std::endl;
+	std::cout << Bob.identify() << std::endl;
+	std::cout << Bob.getBrain().identify() << std::endl;
+	return 0;
 }

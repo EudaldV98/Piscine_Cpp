@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   Human.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/27 18:20:17 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/04/22 20:15:54 by jvaquer          ###   ########.fr       */
+/*   Created: 2020/04/21 20:51:07 by jvaquer           #+#    #+#             */
+/*   Updated: 2020/04/23 23:57:52 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Human.hpp"
 
-Zombie::Zombie(std::string _name, std::string _type)
+Human::Human()
 {
-	name = _name;
-	type = _type;
-	std::cout << "Object created.\n" << std::endl;
 }
 
-void	Zombie::announce()
+std::string Human::identify() const
 {
-	std::cout << '<' << this->name << " (" << this->type << ")>  Braiiiiiiinnnssss ....\n" << std::endl;
+    return  myBrain.identify();
 }
 
-Zombie::~Zombie()
+Brain   &Human::getBrain()
 {
-	std::cout << "Object destroyed.\n" << std::endl;
+    return myBrain;
+}
+
+Human::~Human()
+{
 }

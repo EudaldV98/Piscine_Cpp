@@ -1,30 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/27 18:20:17 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/04/22 20:15:54 by jvaquer          ###   ########.fr       */
+/*   Created: 2020/04/21 20:47:58 by jvaquer           #+#    #+#             */
+/*   Updated: 2020/04/22 20:26:45 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
-
-Zombie::Zombie(std::string _name, std::string _type)
+class Brain
 {
-	name = _name;
-	type = _type;
-	std::cout << "Object created.\n" << std::endl;
-}
+	private:
 
-void	Zombie::announce()
-{
-	std::cout << '<' << this->name << " (" << this->type << ")>  Braiiiiiiinnnssss ....\n" << std::endl;
-}
-
-Zombie::~Zombie()
-{
-	std::cout << "Object destroyed.\n" << std::endl;
-}
+	public:
+		Brain();
+		void		generateIdea() const;
+		std::string	identify() const;
+		~Brain();
+};
