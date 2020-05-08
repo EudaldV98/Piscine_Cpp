@@ -6,7 +6,7 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/06 21:53:41 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/05/08 13:06:57 by jvaquer          ###   ########.fr       */
+/*   Updated: 2020/05/08 23:35:06 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int		Fixed::getRawBits() const
 
 Fixed &Fixed::operator=(const Fixed &c)
 {
-	std::cout << "Assignation operator called (overload)." << std::cout;
+	std::cout << "Assignation operator called (overload)." << std::endl;
 	_raw = c.getRawBits();
 	return *this;
 }
