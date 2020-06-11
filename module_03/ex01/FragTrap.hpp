@@ -6,10 +6,9 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/09 23:47:27 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/05/21 20:30:08 by jvaquer          ###   ########.fr       */
+/*   Updated: 2020/05/21 20:29:44 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #ifndef FRAGTRAP_HPP
 # define FRAGTRAP_HPP

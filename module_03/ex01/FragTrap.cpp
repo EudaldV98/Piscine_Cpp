@@ -6,18 +6,18 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/09 23:47:51 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/05/22 00:04:57 by jvaquer          ###   ########.fr       */
+/*   Updated: 2020/05/22 00:05:09 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-static int		max_value(const int x, const int y)
+int		max_value(const int x, const int y)
 {
 	return x > y ? x : y;
 }
 
-static int		min_value(const int x, const int y)
+int		min_value(const int x, const int y)
 {
 	return x < y ? x : y;
 }
@@ -64,7 +64,7 @@ void	FragTrap::takeDamage(unsigned int amount)
 void	FragTrap::beRepaired(unsigned int amount)
 {
 	int		newHp = min_value(this->hitPts + amount , this->maxHitPts);
-	std::cout << "FR4G-TP " << this->name << " has recovered " << amount << " health and has " << newHp << " hit points left." << std::endl;
+	std::cout << "FR4g-TP " << this->name << " has recovered " << amount << " health and has " << newHp << " hit points left." << std::endl;
 	this->hitPts = newHp;
 }
 

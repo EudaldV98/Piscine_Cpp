@@ -1,43 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/05/09 23:47:27 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/05/21 20:30:08 by jvaquer          ###   ########.fr       */
+/*   Created: 2020/05/21 20:13:44 by jvaquer           #+#    #+#             */
+/*   Updated: 2020/05/25 19:14:01 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
-
-#include <string>
-#include <iostream>
-
-class FragTrap
+# include "ClapTrap.hpp"
+ 
+class ScavTrap: public ClapTrap
 {
-	private:
-		int		hitPts;
-		int		maxHitPts;
-		int		energyPts;
-		int		maxEnergyPts;
-		int		level;
-		int		melee_dmg;
-		int		range_dmg;
-		int		armor_red;
-		std::string name;
-
 	public:
-		FragTrap(std::string n);
+		ScavTrap(std::string n);
 		void	rangedAttack(const std::string &target) const;
 		void	meleeAttack(const std::string &target) const;
-		void	takeDamage(unsigned int amount);
-		void	beRepaired(unsigned int amount);
-		void 	vaulthunter_dot_exe(const std::string &target);
-		~FragTrap();
+		void	challengeNewcomer(const std::string &target);
+		~ScavTrap();
 };
 
 #endif
