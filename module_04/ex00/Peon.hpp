@@ -6,7 +6,7 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/15 00:30:00 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/06/15 00:41:31 by jvaquer          ###   ########.fr       */
+/*   Updated: 2020/06/16 21:07:09 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ class Peon: public Victim
 {
 	public:
 		Peon(std::string name);
-		virtual ~Peon();
+		virtual	void	getPolymorphed() const;
+		virtual	~Peon();
 };
 
 #endif

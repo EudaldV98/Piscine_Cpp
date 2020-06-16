@@ -6,7 +6,7 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/13 19:37:13 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/06/15 00:42:08 by jvaquer          ###   ########.fr       */
+/*   Updated: 2020/06/16 21:18:54 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,14 @@ const std::string &Victim::getName() const
 void	Victim::getPolymorphed() const
 {
 	std::cout << this->Name << " has been turned into a cute little sheep!" << std::endl;
+}
+
+Victim	&Victim::operator=(const Victim&v)
+{
+	std::cout << "Victim " << Name << " just died for no apparent reason!" << std::endl;
+	Name = v.Name;
+	std::cout << "Some random victim called " << Name << " just popped!" << std::endl;
+	return *this;
 }
 
 Victim::~Victim()

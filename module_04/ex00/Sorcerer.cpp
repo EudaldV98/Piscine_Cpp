@@ -31,7 +31,7 @@ const std::string &Sorcerer::getTitle() const
 
 void	Sorcerer::polymorph(Victim const &v) const
 {
-	
+	v.getPolymorphed();
 }
 
 Sorcerer::~Sorcerer()

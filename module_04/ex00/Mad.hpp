@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Victim.hpp                                         :+:      :+:    :+:   */
+/*   Mad.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/13 19:36:35 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/06/16 21:16:17 by jvaquer          ###   ########.fr       */
+/*   Created: 2020/06/16 20:59:01 by jvaquer           #+#    #+#             */
+/*   Updated: 2020/06/16 21:05:32 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef VICTIM_HPP
-# define VICTIM_HPP
+#ifndef MAD_HPP
+# define MAD_HPP
 
-#include <string>
-#include <iostream>
+# include "Victim.hpp"
+# include <iostream>
+# include <string>
 
-class Victim
+class Mad: public Victim
 {
-	protected:
-		std::string Name;
 	public:
-		Victim(std::string name);
-		const std::string &getName() const;
-		virtual void	getPolymorphed() const;
-		Victim &operator=(const Victim&v);
-		virtual ~Victim();
+		Mad(std::string name);
+		virtual void getPolymorphed() const;
+		virtual ~Mad();
 };
-
-std::ostream &operator<< (std::ostream &out, const Victim &s);
 
 #endif

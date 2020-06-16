@@ -6,7 +6,7 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/15 00:31:14 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/06/15 00:41:43 by jvaquer          ###   ########.fr       */
+/*   Updated: 2020/06/16 21:09:41 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@ Peon::Peon(std::string name): Victim(name)
 	std::cout << "Zog zog." << std::endl;
 }
 
+void	Peon::getPolymorphed() const
+{
+	std::cout << this->Name << " has been turned into a pink pony!" << std::endl;
+}
+
 Peon::~Peon()
 {
+	std::cout << "Bleuark...!" << std::endl;
 }

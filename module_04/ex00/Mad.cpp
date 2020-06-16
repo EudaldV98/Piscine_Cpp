@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Victim.hpp                                         :+:      :+:    :+:   */
+/*   Mad.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/13 19:36:35 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/06/16 21:16:17 by jvaquer          ###   ########.fr       */
+/*   Created: 2020/06/16 21:00:20 by jvaquer           #+#    #+#             */
+/*   Updated: 2020/06/16 21:10:19 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef VICTIM_HPP
-# define VICTIM_HPP
+# include "Mad.hpp"
 
-#include <string>
-#include <iostream>
-
-class Victim
+Mad::Mad(std::string name): Victim(name)
 {
-	protected:
-		std::string Name;
-	public:
-		Victim(std::string name);
-		const std::string &getName() const;
-		virtual void	getPolymorphed() const;
-		Victim &operator=(const Victim&v);
-		virtual ~Victim();
-};
+	std::cout << "AAAAAARGH! WHERE AM I?!" << std::endl;
+}
 
-std::ostream &operator<< (std::ostream &out, const Victim &s);
+void	Mad::getPolymorphed() const
+{
+	std::cout << this->Name << " muted into a crazy ostrich" << std::endl;
+}
 
-#endif
+Mad::~Mad()
+{
+	std::cout << "BYE! LEAVE ME ALONE!" << std::endl;
+}
