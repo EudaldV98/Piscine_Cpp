@@ -6,7 +6,7 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/17 19:26:26 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/06/17 19:29:08 by jvaquer          ###   ########.fr       */
+/*   Updated: 2020/06/17 21:03:36 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@
 class RadScorpion: public Enemy
 {
 	public:
-		RadScorpion(/* args */);
-		~RadScorpion();
+		RadScorpion();
+		virtual ~RadScorpion();
 };
 
 #endif

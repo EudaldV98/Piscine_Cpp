@@ -6,7 +6,7 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/17 18:46:44 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/06/17 19:39:32 by jvaquer          ###   ########.fr       */
+/*   Updated: 2020/06/17 21:02:12 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Enemy
 		std::string	getType() const;
 		int	getHP() const;
 		virtual void	takeDamage(int dmg);
-		~Enemy();
+		virtual ~Enemy();
 };
 
 #endif

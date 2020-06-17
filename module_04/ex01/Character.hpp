@@ -6,7 +6,7 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/17 19:32:09 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/06/17 19:39:40 by jvaquer          ###   ########.fr       */
+/*   Updated: 2020/06/17 20:37:26 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,7 @@ class Character
 		int	getAP() const;
 		~Character();
 };
+
+std::ostream &operator<< (std::ostream &out, const Character &c);
 
 #endif

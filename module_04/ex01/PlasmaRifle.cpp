@@ -6,13 +6,13 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/17 17:59:26 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/06/17 18:36:42 by jvaquer          ###   ########.fr       */
+/*   Updated: 2020/06/17 20:58:39 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PlasmaRifle.hpp"
 
-PlasmaRifle::PlasmaRifle(): AWeapon("Plasma Rifle", 21, 5)
+PlasmaRifle::PlasmaRifle(): AWeapon("Plasma Rifle", 5, 21)
 {
 }
 
