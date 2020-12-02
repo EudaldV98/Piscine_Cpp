@@ -6,7 +6,7 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 18:26:15 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/02/27 17:41:03 by jvaquer          ###   ########.fr       */
+/*   Updated: 2020/11/28 19:03:20 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,6 @@ class PhoneBook	{
 	
 		void	ft_add();
 		void	ft_search(PhoneBook book[], int i);
+		void	ft_print_user(PhoneBook book);
+		int		ft_find(PhoneBook book, std::string buf);
 };

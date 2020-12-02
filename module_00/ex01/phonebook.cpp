@@ -6,7 +6,7 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 18:26:31 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/02/27 15:26:07 by jvaquer          ###   ########.fr       */
+/*   Updated: 2020/11/29 10:08:16 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,25 @@ void	PhoneBook::ft_add()
 	getline(std::cin, this->dark);
 }
 
+int		PhoneBook::ft_find(PhoneBook book, std::string buf)
+{
+	size_t		len;
+
+	len = -1;
+	while (++len < book.first_name.length())
+		if (book.first_name.compare(len, buf.size(), buf) == 0)
+			return (1);
+	len = -1;
+	while (++len < book.last_name.length())
+		if (book.last_name.compare(len, buf.size(), buf) == 0)
+			return (1);
+	len = -1;
+	while (++len < book.login.length())
+		if (book.login.compare(len, buf.size(), buf) == 0)
+			return (1);
+	return (0);
+}
+
 void	ft_print_data(std::string toPrint)
 {
 	int		i;
@@ -58,56 +77,56 @@ void	ft_print_data(std::string toPrint)
 	}
 }
 
+void	PhoneBook::ft_print_user(PhoneBook book)
+{
+	std::cout << "First name : " <<  book.first_name << std::endl;
+	std::cout << "Last name : " <<  book.last_name << std::endl;
+	std::cout << "Nick name : " <<  book.nickname << std::endl;
+	std::cout << "Login : " <<  book.login << std::endl;
+	std::cout << "Postal address : " <<  book.postal_address << std::endl;
+	std::cout << "Email : " <<  book.mail << std::endl;
+	std::cout << "Phone number : " <<  book.phone << std::endl;
+	std::cout << "Birthday date : " <<  book.birth << std::endl;
+	std::cout << "Favorite meal : " <<  book.meal << std::endl;
+	std::cout << "Underwear color : " <<  book.underwear << std::endl;
+	std::cout << "Darkest secret : " <<  book.dark << std::endl;
+}
+
 void	PhoneBook::ft_search(PhoneBook book[], const int i)
 {
-	int			j;
-	int			x;
-	int			input;
-	PhoneBook	found[8];
-	int			y;
-	std::string	buf;
-
-	std::cout << "What would you like to find?" << std::endl;
+	int				k;
+	int				index;
+	PhoneBook		tmp[8];
+	std::string		buf;
+	std::string		buf2;
+	std::cout << "Who do you want find ?\n";
 	getline(std::cin, buf);
-	j= 0;
-	x = 0;
-	y = 0;
-	while (j < i)
+	k = -1;
+	index = 0;
+	while (++k < i)
+		if (ft_find(book[k], buf) == 1)
+		{
+			std::cout << index << "|";
+			ft_print_data(book[k].first_name);
+			ft_print_data(book[k].last_name);
+			ft_print_data(book[k].login);
+			std::cout << "\n";
+			tmp[index] = book[k];
+			index++;
+		}
+	if (index-- > 0)
 	{
-		if (book[j].first_name.compare(0, buf.size(), buf) == 0 ||
-			book[j].last_name.compare(0, buf.size(), buf) == 0 ||
-			book[j].login.compare(0, buf.size(), buf) == 0)
-			{
-				std::cout << x << " | ";
-				ft_print_data(book[j].first_name);
-				ft_print_data(book[j].last_name);
-				ft_print_data(book[j].login);
-				std::cout << '\n';
-				found[y] = book[j];
-				y++;
-				x++;
+		while (buf2.size() != 1 || buf2[0] > index + '0' || buf2[0] < '0')
+		{
+			std::cout << "Type the INDEX of the contact you want to read (0-7).\n";
+			getline(std::cin, buf2);
+			if (buf2.size() == 1 && buf2[0] <= index + '0' && buf2[0] >= '0')
+			{	
+				ft_print_user(tmp[buf2[0] - '0']);
+				return ;
 			}
-		j++;
-	}
-	std::cout << std::endl;
-	buf = "";
-	if (x == 0)
-		return ;
-	std::cout << "Type the INDEX of the contact you want to read (1-8)\n" << std::endl;
-	while (input > x || input < '0' || buf.size() != 1)
-	{
-		getline(std::cin, buf);
-		input = buf[0] - '0';
-		std::cout << "Name:            " << found[input].first_name << std::endl;
-		std::cout << "Last name:       " << found[input].last_name << std::endl;
-		std::cout << "Nickname:        " << found[input].nickname << std::endl;
-		std::cout << "Login:           " << found[input].login << std::endl;
-		std::cout << "Postal Address:  " << found[input].postal_address << std::endl;
-		std::cout << "E-mail:          " << found[input].mail << std::endl;
-		std::cout << "Phone number     " << found[input].phone << std::endl;
-		std::cout << "Birth date:      " << found[input].birth << std::endl;
-		std::cout << "Favorite meal    " << found[input].meal << std::endl;
-		std::cout << "Underwear color: " << found[input].underwear << std::endl;
-		std::cout << "Darkest secret:  " << found[input].dark << std::endl;
+			else
+				std::cout << "Please enter a right INDEX\n";
+		}
 	}
 }
