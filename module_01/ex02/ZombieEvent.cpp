@@ -6,7 +6,7 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 18:20:28 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/04/22 20:16:11 by jvaquer          ###   ########.fr       */
+/*   Updated: 2020/12/15 11:00:05 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,27 +21,32 @@ ZombieEvent::ZombieEvent(std::string type)
 
 Zombie	*ZombieEvent::newZombie(std::string name)
 {
-	return new Zombie(name, this->_type);
+	return new Zombie(name, _type);
 }
 
-std::string	random_str()
+std::string	random_str(void)
 {
 	const std::string names[5] = {"Marc", "Jean", "John", "Laure", "Marie"};
 
 	return (names[rand() % 5]);
 }
 
-void	ZombieEvent::randomChump()
+void		ZombieEvent::randomChump(void)
 {
-	Zombie z(random_str(), this->_type);
+	Zombie z(random_str(), _type);
 	z.announce();
 }
 
-void	ZombieEvent::setZombieType(std::string type)
+void		ZombieEvent::setZombieType(std::string type)
 {
 	_type = type;
 }
 
-ZombieEvent::~ZombieEvent()
+std::string	ZombieEvent::getType(void)
+{
+	return _type;
+}
+
+ZombieEvent::~ZombieEvent(void)
 {
 }

@@ -6,25 +6,35 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 18:20:17 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/04/22 20:15:54 by jvaquer          ###   ########.fr       */
+/*   Updated: 2020/12/13 12:13:23 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie(std::string _name, std::string _type)
+Zombie::Zombie(std::string name, std::string type)
 {
-	name = _name;
-	type = _type;
+	_name = name;
+	_type = type;
 	std::cout << "Object created.\n" << std::endl;
 }
 
-void	Zombie::announce()
+void		Zombie::announce()
 {
-	std::cout << '<' << this->name << " (" << this->type << ")>  Braiiiiiiinnnssss ....\n" << std::endl;
+	std::cout << '<' << _name << " (" << _type << ")>  Braiiiiiiinnnssss ...." << std::endl;
+}
+
+std::string	Zombie::getName()
+{
+	return _name;
+}
+
+std::string	Zombie::getType()
+{
+	return _type;
 }
 
 Zombie::~Zombie()
 {
-	std::cout << "Object destroyed.\n" << std::endl;
+	std::cout << "No more Braiiiiiiinnnssss ...." << std::endl;
 }

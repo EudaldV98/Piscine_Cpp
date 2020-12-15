@@ -6,7 +6,7 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/29 00:04:44 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/05/04 23:31:13 by jvaquer          ###   ########.fr       */
+/*   Updated: 2020/12/15 10:55:56 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,7 @@ int		main(int ac, char **av)
 		std::cout << "I/O Error." << std::endl;
 		return 1;
 	}
-
-	//TODO
+	
 	std::string::size_type findlen = find.length();
 	char *queue = new char[findlen];
 	std::string::size_type index = 0;

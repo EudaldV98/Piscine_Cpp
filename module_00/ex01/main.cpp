@@ -6,7 +6,7 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 18:25:44 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/11/29 00:25:41 by jvaquer          ###   ########.fr       */
+/*   Updated: 2020/12/09 23:53:10 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int		main(int ac, char **av)
 			if (i < 8)
 				book[i++].ft_add();
 			else
-				std::cout << "The book is full!" << std::endl;
+				std::cout << "\nTHE BOOK IS FULL!" << std::endl;
 		}
 		else if (buf.compare("SEARCH") == 0)
 			book[i].ft_search(book, i);

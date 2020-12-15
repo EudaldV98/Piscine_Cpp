@@ -6,13 +6,11 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/21 23:47:22 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/04/23 23:52:26 by jvaquer          ###   ########.fr       */
+/*   Updated: 2020/12/14 18:00:39 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "Brain.hpp"
-#include <sstream>
 
 Brain::Brain()
 {
@@ -20,7 +18,7 @@ Brain::Brain()
 
 void		Brain::generateIdea() const
 {
-	std::cout << "How about drinking upside down?" << std::endl;
+	std::cout << "What about using me to think sometimes?" << std::endl;
 }
 
 std::string	Brain::identify() const
