@@ -6,7 +6,7 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/29 00:04:44 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/12/15 10:55:56 by jvaquer          ###   ########.fr       */
+/*   Updated: 2020/12/15 12:17:49 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,7 @@ int		main(int ac, char **av)
 		len--;
 		index = (index + 1) % findlen;
 	}
+	//delete queue;
 	in.close();
 	out.close();
 	return 0;

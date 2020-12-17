@@ -30,8 +30,6 @@ int		Fixed::getRawBits() const
 	return raw;
 }
 
-
-
 Fixed &Fixed::operator=(const Fixed &c)
 {
 	std::cout << "Assignation operator called (overload)." << std::endl;
