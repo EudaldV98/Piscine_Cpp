@@ -16,16 +16,19 @@
 class Fixed
 {
 	private:
+
 		int					raw;
 		static const int	fracBits = 8;
+
 	public:
+
 		Fixed();
 		Fixed(const Fixed &c);
 		Fixed &operator=(const Fixed &c);
-		~Fixed();
-
 		int		getRawBits() const;
 		void	setRawBits(const int r);
+		~Fixed();
+
 };
 
 #endif
