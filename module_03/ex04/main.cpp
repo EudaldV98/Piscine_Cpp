@@ -18,6 +18,7 @@
 
 int main()
 {
+	std::cout << "-----------FR4G_TP-----------" << std::endl;
     FragTrap frag("frag");
 
     frag.rangedAttack("your whole family");
@@ -34,6 +35,7 @@ int main()
     frag.vaulthunter_dot_exe("your whole family");
     frag.vaulthunter_dot_exe("your whole family");
 
+	std::cout << "-----------SC4V_TP-----------" << std::endl;
     ScavTrap scav("scav");
 
     scav.rangedAttack("your whole family");
@@ -50,6 +52,7 @@ int main()
     scav.challengeNewcomer("your whole family");
     scav.challengeNewcomer("your whole family");
 
+	std::cout << "----------NINJ4_TP-----------" << std::endl;
     NinjaTrap ninja("ninja");
 
     ninja.rangedAttack("your whole family");
@@ -67,8 +70,7 @@ int main()
     ninja.ninjaShoebox(scav);
     ninja.ninjaShoebox(ninja);
 
-    std::cout << ":: SuperTrap ::" << std::endl;
-
+	std::cout << "-----------SUPER_TP-----------" << std::endl;
     SuperTrap super("super");
 
     std::cout << ":: " << super.getHitPoints() << " " << super.getEnergyPoints() << " ::" << std::endl;
