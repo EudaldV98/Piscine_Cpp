@@ -24,54 +24,52 @@ static int min(int a, int b)
 
 ClapTrap::ClapTrap(std::string n, int hitPoints, int energyPoints)
 {
-	name = n;
-	hitPts = hitPoints;
-	energyPts = energyPoints;
-	std::cout << "CL4P-TP " << this->name << " is a new-born star!" << std::endl;
-}
-
-ClapTrap::~ClapTrap()
-{
-	std::cout << "CL4P-TP " << name << " is now a dead new-born star." << std::endl;
+	_name = n;
+	_hitPts = hitPoints;
+	_energyPts = energyPoints;
+	std::cout << "CL4P-TP " << _name << " is a CL4P-TP!" << std::endl;
 }
 
 const std::string &ClapTrap::getName() const
 {
-	return name;
+	return _name;
 }
 
 const int &ClapTrap::getHitPoints() const
 {
-	return hitPts;
+	return _hitPts;
 }
 
 const int &ClapTrap::getEnergyPoints() const
 {
-	return energyPts;
+	return _energyPts;
 }
 
 void ClapTrap::setEnergyPoints(const int &energyPoints)
 {
-	energyPts = energyPoints;
+	_energyPts = energyPoints;
 }
 
 void ClapTrap::setHitPoints(const int &hitPoints)
 {
-	hitPts = hitPoints;
+	_hitPts = hitPoints;
 }
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
-	int newHp = max(hitPts - int(amount / (dmg_armorRed + 1)), 0);
-	std::cout << "CL4P-TP " << name
-		<< " took " <<  hitPts - newHp
-		<< " points of damage!" << std::endl;
-	hitPts = newHp;
+	int newHp = max(_hitPts - int(amount / (_dmg_armorRed + 1)), 0);
+	std::cout << "CL4P-TP " << _name << " took " <<  _hitPts - newHp << " dmg pts!" << std::endl;
+	_hitPts = newHp;
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-	int newHp = min(hitPts + int(amount), maxHitPts);
-	std::cout << "CL4P-TP " << name << " was repaired by " << newHp - hitPts << " points!" << std::endl;
-	hitPts = newHp;
+	int newHp = min(_hitPts + int(amount), _maxHitPts);
+	std::cout << "CL4P-TP " << _name << " was repaired by " << newHp - _hitPts << " points!" << std::endl;
+	_hitPts = newHp;
+}
+
+ClapTrap::~ClapTrap()
+{
+	std::cout << "CL4P-TP " << _name << " is now a dead new-born star." << std::endl;
 }
