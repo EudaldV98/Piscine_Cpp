@@ -14,21 +14,18 @@
 
 int main(void)
 {
-    FragTrap ft("unicorn");
+    srand(time(NULL));
+    FragTrap ft("A current human");
 
-    ft.rangedAttack("your whole family");
-    ft.meleeAttack("your whole family");
+    ft.rangedAttack("A murderer");
+    ft.meleeAttack("A poor cat");
     ft.takeDamage(42);
     ft.beRepaired(42);
 
-    ft.vaulthunter_dot_exe("your whole family");
-    ft.vaulthunter_dot_exe("your whole family");
-    ft.vaulthunter_dot_exe("your whole family");
-    ft.vaulthunter_dot_exe("your whole family");
-    ft.vaulthunter_dot_exe("your whole family");
-    ft.vaulthunter_dot_exe("your whole family");
-    ft.vaulthunter_dot_exe("your whole family");
-    ft.vaulthunter_dot_exe("your whole family");
-
+    ft.vaulthunter_dot_exe("your entire family");
+    ft.vaulthunter_dot_exe("your entire family");
+    ft.vaulthunter_dot_exe("your entire family");
+    ft.vaulthunter_dot_exe("your entire family");
+    ft.vaulthunter_dot_exe("your entire family");
     return 0;
 }

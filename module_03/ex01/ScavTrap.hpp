@@ -19,22 +19,26 @@
 class ScavTrap
 {
 	private:
-		int	hitPts;
-		int maxHitPts;
-		int energyPts;
-		int	maxEnergyPts;
-		int	level;
-		int melee_dmg;
-		int	range_dmg;
-		int	dmg_armorRed;
-		std::string	name;
+
+		int					_hitPts;
+		int 				_maxHitPts;
+		int 				_energyPts;
+		int					_maxEnergyPts;
+		int					_level;
+		int 				_melee_dmg;
+		int					_range_dmg;
+		int					_armorRed;
+		std::string	_name;
+
 	public:
+
 		ScavTrap(std::string n);
-		void	rangedAttack(const std::string &target) const;
-		void	meleeAttack(const std::string &target) const;
-		void	takeDamage(unsigned int amount);
-		void	beRepaired(unsigned int amount);
-		void	challengeNewcomer(const std::string &target);
+		void				rangedAttack(const std::string &target) const;
+		void				meleeAttack(const std::string &target) const;
+		void				takeDamage(unsigned int amount);
+		void				beRepaired(unsigned int amount);
+		void				challengeNewcomer(const std::string &target);
+		std::string	getName(void);
 		~ScavTrap();
 };
 

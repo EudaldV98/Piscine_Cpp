@@ -5,65 +5,42 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/05/29 12:29:39 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/05/29 12:29:59 by jvaquer          ###   ########.fr       */
+/*   Created: 2020/05/25 19:11:44 by jvaquer           #+#    #+#             */
+/*   Updated: 2020/05/25 19:12:24 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
-#include "NinjaTrap.hpp"
 
 int main()
 {
-    FragTrap frag("frag");
+	srand(time(NULL));
+	std::cout << "-----------FR4G_TP----------" << std::endl;
+	{
+		FragTrap ft("Frag_Trap_A");
 
-    frag.rangedAttack("your whole family");
-    frag.meleeAttack("your whole family");
-    frag.takeDamage(42);
-    frag.beRepaired(42);
+		ft.rangedAttack("YOU");
+ 		ft.meleeAttack("YOU");
+		ft.takeDamage(42);
+		ft.beRepaired(42);
 
-    frag.vaulthunter_dot_exe("your whole family");
-    frag.vaulthunter_dot_exe("your whole family");
-    frag.vaulthunter_dot_exe("your whole family");
-    frag.vaulthunter_dot_exe("your whole family");
-    frag.vaulthunter_dot_exe("your whole family");
-    frag.vaulthunter_dot_exe("your whole family");
-    frag.vaulthunter_dot_exe("your whole family");
-    frag.vaulthunter_dot_exe("your whole family");
+		ft.vaulthunter_dot_exe("YOU");
+		ft.vaulthunter_dot_exe("YOU");
+		ft.vaulthunter_dot_exe("YOU");
+		ft.vaulthunter_dot_exe("YOU");
+	}
+	std::cout << "\n-----------SC4V_TP-----------" << std::endl;
+	{
+		ScavTrap ft("Scav_Trap_A");
 
-    ScavTrap scav("scav");
+		ft.rangedAttack("YOU");
+		ft.meleeAttack("YOU");
+		ft.takeDamage(42);
+		ft.beRepaired(42);
 
-    scav.rangedAttack("your whole family");
-    scav.meleeAttack("your whole family");
-    scav.takeDamage(42);
-    scav.beRepaired(42);
-
-    scav.challengeNewcomer("your whole family");
-    scav.challengeNewcomer("your whole family");
-    scav.challengeNewcomer("your whole family");
-    scav.challengeNewcomer("your whole family");
-    scav.challengeNewcomer("your whole family");
-    scav.challengeNewcomer("your whole family");
-    scav.challengeNewcomer("your whole family");
-    scav.challengeNewcomer("your whole family");
-
-    NinjaTrap ninja("ninja");
-
-    ninja.rangedAttack("your whole family");
-    ninja.meleeAttack("your whole family");
-    ninja.takeDamage(42);
-    ninja.beRepaired(42);
-
-    ninja.ninjaShoebox(frag);
-    ninja.ninjaShoebox(scav);
-    ninja.ninjaShoebox(ninja);
-    ninja.ninjaShoebox(frag);
-    ninja.ninjaShoebox(scav);
-    ninja.ninjaShoebox(ninja);
-    ninja.ninjaShoebox(frag);
-    ninja.ninjaShoebox(scav);
-    ninja.ninjaShoebox(ninja);
-
-    return 0;
+		ft.challengeNewcomer("YOU");
+		ft.challengeNewcomer("YOU");
+	}
+	return 0;
 }

@@ -20,24 +20,27 @@
 class FragTrap
 {
 	private:
-		int		hitPts;
-		int		maxHitPts;
-		int		energyPts;
-		int		maxEnergyPts;
-		int		level;
-		int		melee_dmg;
-		int		range_dmg;
-		int		armor_red;
-		std::string name;
+		
+	int					_hitPts;
+	int					_maxHitPts;
+	int					_energyPts;
+	int					_maxEnergyPts;
+	int					_level;
+	int					_melee_dmg;
+	int					_range_dmg;
+	int					_armor_red;
+	std::string _name;
 
 	public:
-		FragTrap(std::string n);
-		void	rangedAttack(const std::string &target) const;
-		void	meleeAttack(const std::string &target) const;
-		void	takeDamage(unsigned int amount);
-		void	beRepaired(unsigned int amount);
-		void 	vaulthunter_dot_exe(const std::string &target);
-		~FragTrap();
+        
+	FragTrap(std::string n);
+	void				rangedAttack(const std::string &target) const;
+	void				meleeAttack(const std::string &target) const;
+	void				takeDamage(unsigned int n);
+	void				beRepaired(unsigned int n);
+	void				vaulthunter_dot_exe(const std::string &target);
+	std::string	getName(void);
+	~FragTrap();
 };
 
 #endif

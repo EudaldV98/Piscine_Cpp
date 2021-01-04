@@ -26,12 +26,12 @@ NinjaTrap::~NinjaTrap()
 
 void NinjaTrap::rangedAttack(const std::string &target) const
 {
-	std::cout << "NINJ4-TP " << getName() << " attacks " << target << " at range, causing " << getRangedAttackDamage() << " points of damage! Not bad!" << std::endl;
+	std::cout << "NINJ4-TP " << getName() << " attacks " << target << " at range, causing " << getRangedAttackDamage() << " dmg pts! Not bad!" << std::endl;
 }
 
 void NinjaTrap::meleeAttack(const std::string &target) const
 {
-	std::cout << "NINJ4-TP " << getName() << " attacks " << target << " at melee, causing " << getMeleeAttackDamage() << " points of damage! Not bad!" << std::endl;
+	std::cout << "NINJ4-TP " << getName() << " attacks " << target << " at melee, causing " << getMeleeAttackDamage() << " dmg pts! Not bad!" << std::endl;
 }
 
 void NinjaTrap::ninjaShoebox(const FragTrap &target)

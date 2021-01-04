@@ -15,39 +15,35 @@
 
 int main(void)
 {
-    {
-        FragTrap ft("unicorn");
+	std::cout << "-----------FR4G_TP-----------" << std::endl;
+	{
+		FragTrap ft("FragTrap_A");
 
-        ft.rangedAttack("your whole family");
-        ft.meleeAttack("your whole family");
-        ft.takeDamage(42);
-        ft.beRepaired(42);
+		ft.rangedAttack("your entire family");
+		ft.meleeAttack("your entire family");
+		ft.takeDamage(42);
+		ft.beRepaired(42);
 
-        ft.vaulthunter_dot_exe("your whole family");
-        ft.vaulthunter_dot_exe("your whole family");
-        ft.vaulthunter_dot_exe("your whole family");
-        ft.vaulthunter_dot_exe("your whole family");
-        ft.vaulthunter_dot_exe("your whole family");
-        ft.vaulthunter_dot_exe("your whole family");
-        ft.vaulthunter_dot_exe("your whole family");
-        ft.vaulthunter_dot_exe("your whole family");
-    }
-    {
-        ScavTrap ft("unicorn");
+		ft.vaulthunter_dot_exe("your whole family");
+		ft.vaulthunter_dot_exe("your whole family");
+		ft.vaulthunter_dot_exe("your whole family");
+		ft.vaulthunter_dot_exe("your whole family");
+		ft.vaulthunter_dot_exe("your whole family");
+	}
+	std::cout << "\n-----------SC4V_TP-----------" << std::endl;
+	{
+		ScavTrap ft("ScavTrap_A");
 
-        ft.rangedAttack("your whole family");
-        ft.meleeAttack("your whole family");
-        ft.takeDamage(42);
-        ft.beRepaired(42);
+		ft.rangedAttack("your entire family");
+		ft.meleeAttack("your entire family");
+		ft.takeDamage(42);
+		ft.beRepaired(42);
 
-        ft.challengeNewcomer("your whole family");
-        ft.challengeNewcomer("your whole family");
-        ft.challengeNewcomer("your whole family");
-        ft.challengeNewcomer("your whole family");
-        ft.challengeNewcomer("your whole family");
-        ft.challengeNewcomer("your whole family");
-        ft.challengeNewcomer("your whole family");
-        ft.challengeNewcomer("your whole family");
-    }
-    return 0;
+		ft.challengeNewcomer("your whole family");
+		ft.challengeNewcomer("your whole family");
+		ft.challengeNewcomer("your whole family");
+		ft.challengeNewcomer("your whole family");
+		ft.challengeNewcomer("your whole family");
+	}
+	return 0;
 }
