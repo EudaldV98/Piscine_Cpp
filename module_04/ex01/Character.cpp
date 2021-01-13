@@ -6,7 +6,7 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/17 19:31:49 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/06/17 21:04:14 by jvaquer          ###   ########.fr       */
+/*   Updated: 2021/01/13 03:34:35 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,50 +14,50 @@
 
 Character::Character(std::string const &name)
 {
-	Name = name;
-	AP = 40;
-	Weapon = NULL;
+	_name = name;
+	_aP = 40;
+	_Weapon = NULL;
 }
 
 void	Character::recoverAP()
 {
-	AP += 10;
-	AP = (AP > 40) ? 40 : AP;
+	_aP += 10;
+	_aP = (_aP > 40) ? 40 : _aP;
 }
 
 void	Character::equip(AWeapon *weapon)
 {
-	Weapon = weapon;
+	_Weapon = weapon;
 }
 
 const std::string	&Character::getName() const
 {
-	return Name;
+	return _name;
 }
 
 const AWeapon	*Character::getWeapon() const
 {
-	return	Weapon;
+	return	_Weapon;
 }
 
 int		Character::getAP() const
 {
-	return AP;
+	return _aP;
 }
 
 void	Character::attack(Enemy *target)
 {
-	if (!Weapon)
-		std::cout << Name << " has no weapon!" << std::endl;
-	if	(AP < Weapon->getAPCost())
-		std::cout << Name << " doesn't have enough AP!" << std::endl;
+	if (!_Weapon)
+		std::cout << _name << " has no weapon!" << std::endl;
+	if	(_aP < _Weapon->getAPCost())
+		std::cout << _name << " doesn't have enough AP!" << std::endl;
 	else
 	{
-		AP -= Weapon->getAPCost();
-		std::cout << this->Name << " attcks " << target->getType() << " with a " << this->Weapon->getName() << "." << std::endl;
-		Weapon->attack();
-		target->takeDamage(Weapon->getDamage());
-		if (target->getHP() <= 0)
+		_aP -= _Weapon->getAPCost();
+		std::cout << this->_name << " attcks " << target->getType() << " with a " << this->_Weapon->getName() << "." << std::endl;
+		_Weapon->attack();
+		target->takeDamage(_Weapon->getDamage());
+		if (target->getHp() <= 0)
 			delete target;
 	}
 }
@@ -70,5 +70,5 @@ std::ostream &operator << (std::ostream &out, const Character &c)
 {
 	if (c.getWeapon() != NULL)
 		return out << c.getName() << " has " << c.getAP() << " AP and wields a " << c.getWeapon()->getName() << "." << std::endl;
-	return out << c.getName() << " has " << c.getAP() << "and is unarmed." << std::endl;
+	return out << c.getName() << " has " << c.getAP() << " AP and is unarmed." << std::endl;
 }

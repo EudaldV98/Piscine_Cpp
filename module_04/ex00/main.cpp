@@ -6,31 +6,31 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/14 23:58:09 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/06/16 21:24:09 by jvaquer          ###   ########.fr       */
+/*   Updated: 2021/01/10 12:15:22 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Sorcerer.hpp"
 #include "Peon.hpp"
 #include "Victim.hpp"
-#include "Mad.hpp"
+#include "Student.hpp"
 
 int main()
 {
-	Sorcerer robert("Robert", "the Magnificent");
-	Victim jim("Jimmy");
-	Victim pete("Pete");
-	Peon joe("Joe");
-	Mad max("Max");
-	std::cout << robert << jim << joe << max << pete;
-	robert.polymorph(jim);
-	robert.polymorph(joe);
-	robert.polymorph(max);
-	robert.polymorph(pete);
+	Sorcerer voldemort("Voldemort", " the unnamed");
+	Victim harry("Harry");
+	Victim ron("Ron");
+	Peon pettigrew("Pettigrew");
+	Student charles("Charles");
+	std::cout << voldemort << harry << ron << pettigrew << charles;
+	voldemort.polymorph(harry);
+	voldemort.polymorph(ron);
+	voldemort.polymorph(charles);
+	voldemort.polymorph(pettigrew);
 	std::cout << "=========================" << std::endl;
-	jim = pete;
-	std::cout << robert << jim << pete;
-	robert.polymorph(jim);
-	robert.polymorph(pete);
+	harry = pettigrew;
+	std::cout << voldemort << harry << pettigrew;
+	voldemort.polymorph(harry);
+	voldemort.polymorph(pettigrew);
 	return 0;
 }

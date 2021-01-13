@@ -20,8 +20,12 @@
 class Sorcerer
 {
 	private:
-		std::string Name, Title;
+
+		std::string _name;
+		std::string _title;
+	
 	public:
+		
 		Sorcerer(std::string name, std::string title);
 		const std::string &getName() const;
 		const std::string &getTitle() const;

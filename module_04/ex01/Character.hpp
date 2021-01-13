@@ -6,7 +6,7 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/17 19:32:09 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/06/17 20:37:26 by jvaquer          ###   ########.fr       */
+/*   Updated: 2021/01/10 12:28:28 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,13 @@
 class Character
 {
 	private:
-		std::string Name;
-		int AP;
-		AWeapon *Weapon;
+		
+		std::string _name;
+		int 		_aP;
+		AWeapon 	*_Weapon;
 
 	public:
+		
 		Character(std::string const &name);
 		void	recoverAP();
 		void	equip(AWeapon *weapon);

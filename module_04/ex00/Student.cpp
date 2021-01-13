@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Mad.cpp                                            :+:      :+:    :+:   */
+/*   Student.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/16 21:00:20 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/06/16 21:10:19 by jvaquer          ###   ########.fr       */
+/*   Updated: 2021/01/08 00:05:25 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "Mad.hpp"
+# include "Student.hpp"
 
-Mad::Mad(std::string name): Victim(name)
+Student::Student(std::string name): Victim(name)
 {
 	std::cout << "AAAAAARGH! WHERE AM I?!" << std::endl;
 }
 
-void	Mad::getPolymorphed() const
+void	Student::getPolymorphed() const
 {
-	std::cout << this->Name << " muted into a crazy ostrich" << std::endl;
+	std::cout << _name << " muted into a crazy ostrich" << std::endl;
 }
 
-Mad::~Mad()
+Student::~Student()
 {
 	std::cout << "BYE! LEAVE ME ALONE!" << std::endl;
 }

@@ -14,19 +14,19 @@
 
 Sorcerer::Sorcerer(std::string name, std::string title)
 {
-	Name  = name;
-	Title = title;
-	std::cout << Name << ", " << Title << " is born!" << std::endl;
+	_name  = name;
+	_title = title;
+	std::cout << _name << ", " << _title << " is born!" << std::endl;
 }
 
 const std::string &Sorcerer::getName() const
 {
-	return this->Name;
+	return _name;
 }
 
 const std::string &Sorcerer::getTitle() const
 {
-	return this->Title;
+	return _title;
 }
 
 void	Sorcerer::polymorph(Victim const &v) const
@@ -36,7 +36,7 @@ void	Sorcerer::polymorph(Victim const &v) const
 
 Sorcerer::~Sorcerer()
 {
-	std::cout << Name << ", " << Title <<  ", is dead. Consequences will never be the same!" << std::endl;
+	std::cout << _name << ", " << _title <<  ", is dead. Consequences will never be the same!" << std::endl;
 }
 
 std::ostream &operator << (std::ostream &out, const Sorcerer &s)

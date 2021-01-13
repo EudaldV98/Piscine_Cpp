@@ -6,7 +6,7 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/20 00:44:25 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/06/24 11:54:28 by jvaquer          ###   ########.fr       */
+/*   Updated: 2021/01/13 13:07:01 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,23 +18,28 @@
 class Squad: public ISquad
 {
     private:
-        struct node {
-            ISpaceMarine *sm;
-            node *next;
+
+		struct node {
+            ISpaceMarine *_sm;
+            node *_next;
         };
 
-        node	*Lst;
-        int		Count;
-
-        node *lst_deep_cpy(node *node);
-        void lst_destroy(node *node);
+        node	*_lst;
+        int		_count;
 
     public:
-        Squad();
+
+		Squad();
+		Squad(const Squad &s);
+		Squad	&operator=(const Squad &s);
         virtual int getCount() const;
         virtual ISpaceMarine *getUnit(int unit) const;
         virtual int push(ISpaceMarine *sm);
-        virtual ~Squad();
+        
+		node *lst_deep_cpy(node *node);
+        void lst_destroy(node *node);
+        
+		~Squad();
 };
 
 #endif

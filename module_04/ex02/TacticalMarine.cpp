@@ -6,7 +6,7 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/24 11:43:03 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/06/24 11:43:24 by jvaquer          ###   ########.fr       */
+/*   Updated: 2021/01/13 12:45:53 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,25 +15,38 @@
 
 TacticalMarine::TacticalMarine()
 {
-    std::cout << "Tactical Marine ready for battle" << std::endl;
+    std::cout << "Tactical Marine ready for the battle" << std::endl;
 }
 
-TacticalMarine *TacticalMarine::clone() const
+TacticalMarine::TacticalMarine(const TacticalMarine &tm)
+{
+	(void)tm;
+	std::cout << "Tactical Marine ready for the battle" << std::endl;
+}
+
+TacticalMarine	&TacticalMarine::operator=(const TacticalMarine &tm)
+{
+	(void)tm;
+	std::cout << "Tactical Marine ready for the battle." << std::endl;
+	return *this;
+}
+
+ISpaceMarine *TacticalMarine::clone() const
 {
     return new TacticalMarine(*this);
 }
 
-void TacticalMarine::battleCry() const
+void 			TacticalMarine::battleCry() const
 {
     std::cout << "For the holy PLOT !" << std::endl;
 }
 
-void TacticalMarine::rangedAttack() const
+void 			TacticalMarine::rangedAttack() const
 {
     std::cout << "* attacks with bolter *" << std::endl;
 }
 
-void TacticalMarine::meleeAttack() const
+void 			TacticalMarine::meleeAttack() const
 {
     std::cout << "* attacks with chainsword *" << std::endl;
 }

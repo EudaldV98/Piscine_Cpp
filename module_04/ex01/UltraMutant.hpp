@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Mad.hpp                                            :+:      :+:    :+:   */
+/*   UltraMutant.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/16 20:59:01 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/06/16 21:05:32 by jvaquer          ###   ########.fr       */
+/*   Created: 2021/01/12 11:27:43 by jvaquer           #+#    #+#             */
+/*   Updated: 2021/01/12 13:04:13 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MAD_HPP
-# define MAD_HPP
+#ifndef ULTRAMUTANT_HPP
+# define ULTRAMUTANT_HPP
 
-# include "Victim.hpp"
-# include <iostream>
+# include "Enemy.hpp" 
 # include <string>
+# include <stdio.h>
 
-class Mad: public Victim
+class UltraMutant: public Enemy
 {
 	public:
-		Mad(std::string name);
-		virtual void getPolymorphed() const;
-		virtual ~Mad();
+		
+		UltraMutant();
+		UltraMutant(const UltraMutant &um);
+		UltraMutant		&operator=(const UltraMutant &um);
+		virtual void	takeDamage(int dmg);
+		~UltraMutant();
 };
 
 #endif

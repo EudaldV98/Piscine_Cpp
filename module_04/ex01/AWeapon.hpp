@@ -6,7 +6,7 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/16 21:38:12 by jvaquer           #+#    #+#             */
-/*   Updated: 2020/06/17 18:10:42 by jvaquer          ###   ########.fr       */
+/*   Updated: 2021/01/10 13:43:16 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,24 @@
 
 class AWeapon
 {
-	private:
-		std::string Name;
-		int APCost, Damage;
-		
+	protected:
+
+		AWeapon();
+		std::string _name;
+		int 		_apCost; 
+		int			_damage;
+
 	public:
+		
 		AWeapon(const std::string &name, int apcost, int damage);
-		const std::string &getName() const;
+		AWeapon(const AWeapon &w);
+		
+		const std::string	&getName() const;
 		int	getAPCost() const;
-		int getDamage() const;
-		virtual void attack() const = 0;
+		int	getDamage() const;
+		AWeapon	&operator=(const AWeapon &w);
+		virtual void	attack() const = 0;
+		
 		~AWeapon();
 };
 

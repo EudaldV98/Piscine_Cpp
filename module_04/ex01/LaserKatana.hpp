@@ -1,40 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PlasmaRifle.hpp                                    :+:      :+:    :+:   */
+/*   LaserKatana.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/17 17:59:56 by jvaquer           #+#    #+#             */
-/*   Updated: 2021/01/10 23:49:21 by jvaquer          ###   ########.fr       */
+/*   Created: 2021/01/12 23:36:21 by jvaquer           #+#    #+#             */
+/*   Updated: 2021/01/12 23:47:39 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PLASMARIFLE_HPP
-# define PLASMARIFLE_HPP
+#ifndef LASERKATAN_HPP
+# define LASERKATAN_HPP
 
-# include "AWeapon.hpp"
-# include <iostream>
-# include <string>
+#include "AWeapon.hpp"
+#include <stdio.h>
+#include <string>
 
-class PlasmaRifle: public AWeapon
+class LaserKatana: public AWeapon
 {
 	protected:
-		
-		PlasmaRifle(std::string name, int apcost, int damage);
+
+		LaserKatana(std::string name, int apcost, int damage);
 
 	public:
 
-		PlasmaRifle();
-		PlasmaRifle(const PlasmaRifle &p);
+		LaserKatana();
+		LaserKatana(const LaserKatana &lp);
 
-		PlasmaRifle		&operator=(const PlasmaRifle &p);
+		LaserKatana		&operator=(const LaserKatana &lp);
 		std::string		getName() const;
 		int				getDamage() const;
 		int				getApCost() const;
-		virtual	void	attack() const;
-		
-		~PlasmaRifle();
+		virtual void	attack() const;
+
+		~LaserKatana();
 };
 
 #endif
