@@ -6,7 +6,7 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/17 19:26:26 by jvaquer           #+#    #+#             */
-/*   Updated: 2021/01/11 14:15:36 by jvaquer          ###   ########.fr       */
+/*   Updated: 2021/01/15 17:24:19 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class RadScorpion: public Enemy
 		RadScorpion(const RadScorpion &rs);
 		RadScorpion	&operator=(const RadScorpion &rs);
 		virtual void	takeDamage(int Damage);
-		~RadScorpion();
+		virtual ~RadScorpion();
 };
 
 #endif

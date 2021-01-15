@@ -6,7 +6,7 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/16 21:38:12 by jvaquer           #+#    #+#             */
-/*   Updated: 2021/01/10 13:43:16 by jvaquer          ###   ########.fr       */
+/*   Updated: 2021/01/15 17:22:53 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ class AWeapon
 		AWeapon	&operator=(const AWeapon &w);
 		virtual void	attack() const = 0;
 		
-		~AWeapon();
+		virtual ~AWeapon();
 };
 
 #endif

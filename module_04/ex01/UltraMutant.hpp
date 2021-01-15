@@ -6,7 +6,7 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 11:27:43 by jvaquer           #+#    #+#             */
-/*   Updated: 2021/01/12 13:04:13 by jvaquer          ###   ########.fr       */
+/*   Updated: 2021/01/15 17:25:12 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class UltraMutant: public Enemy
 		UltraMutant(const UltraMutant &um);
 		UltraMutant		&operator=(const UltraMutant &um);
 		virtual void	takeDamage(int dmg);
-		~UltraMutant();
+		virtual ~UltraMutant();
 };
 
 #endif

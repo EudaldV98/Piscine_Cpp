@@ -6,7 +6,7 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 23:36:21 by jvaquer           #+#    #+#             */
-/*   Updated: 2021/01/12 23:47:39 by jvaquer          ###   ########.fr       */
+/*   Updated: 2021/01/15 17:23:26 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ class LaserKatana: public AWeapon
 		int				getApCost() const;
 		virtual void	attack() const;
 
-		~LaserKatana();
+		virtual ~LaserKatana();
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/17 18:37:41 by jvaquer           #+#    #+#             */
-/*   Updated: 2021/01/10 23:49:41 by jvaquer          ###   ########.fr       */
+/*   Updated: 2021/01/15 17:23:59 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ class PowerFist: public AWeapon
 		int			getApCost() const;
 		virtual void attack() const;
 
-		~PowerFist();
+		virtual ~PowerFist();
 };
 
 #endif

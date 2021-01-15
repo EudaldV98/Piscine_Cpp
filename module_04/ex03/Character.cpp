@@ -6,7 +6,7 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 13:37:01 by jvaquer           #+#    #+#             */
-/*   Updated: 2021/01/13 13:38:38 by jvaquer          ###   ########.fr       */
+/*   Updated: 2021/01/15 17:36:16 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ void		Character::equip(AMateria* m)
         _inv[_count] = m;
         _count++;
     }
-    return;
+    return ;
 }
 
 void		Character::unequip(int idx)
