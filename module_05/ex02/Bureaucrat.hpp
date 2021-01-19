@@ -6,7 +6,7 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/18 12:29:05 by jvaquer           #+#    #+#             */
-/*   Updated: 2021/01/18 13:49:45 by jvaquer          ###   ########.fr       */
+/*   Updated: 2021/01/19 13:03:46 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ class Bureaucrat
 		void				incrementGrade();
 		void				decrementGrade();
 		void				signForm(Form &f);
-
+		void				executeForm(const Form &form);
 		class GradeTooHighException: public std::exception
 		{
 			virtual const char		*what() const throw();

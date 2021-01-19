@@ -6,7 +6,7 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/18 13:25:31 by jvaquer           #+#    #+#             */
-/*   Updated: 2021/01/19 00:06:02 by jvaquer          ###   ########.fr       */
+/*   Updated: 2021/01/19 12:57:46 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,26 @@ const char		*Form::GradeTooHighException::what() const throw()
 {
 	return	"Grade is too low";
 }
+
+const char		*Form::FormNoSigned::what() const throw()
+{
+	return "Form was not signed\n";
+}
+
+void		Form::execute(const Bureaucrat &executor) const
+{
+	try {
+		if (!_signed)
+			throw Form::FormNoSigned();
+		if (executor.getGrade() > _execGrade)
+			throw Form::GradeTooLowException();
+		else
+			action(executor);
+	} catch(const std::exception& e) {
+		std::cerr << e.what() << '\n';
+	}
+}
+
 
 std::ostream	&operator<<(std::ostream &out, const Form &f)
 {

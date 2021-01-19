@@ -6,12 +6,15 @@
 /*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/18 12:51:54 by jvaquer           #+#    #+#             */
-/*   Updated: 2021/01/18 13:47:26 by jvaquer          ###   ########.fr       */
+/*   Updated: 2021/01/19 13:00:53 by jvaquer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
+#include "PresidentialPardonForm.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
 
 int main()
 {
@@ -26,7 +29,7 @@ int main()
 	}catch (std:: exception &e){
 		std::cout << "Exception: " << e.what() << std::endl;
 	}
-	
+
 	std::cout << "2." << std::endl;
 	try{
 		Bureaucrat b1("Johnny", 0);
@@ -68,48 +71,103 @@ int main()
 		std::cout << "Exception: " << e.what();
 	}
 
-	std::cout << "\nEX01 : WITH FORMS\n\n";
-    std::cout << "6." << std::endl;
-    try{
-        Bureaucrat b1("Johnny", 1);
-        Form f1("Formulaire", 150, 5);
-        b1.signForm(f1);
-        std::cout << "Success: " << b1 << " " << f1 << std::endl;
-    }catch (std::exception &e){
-        std::cout << "Exception: " << e.what() << std::endl;
-    }
+	std::cout << "\nEX02 : WITH DIFFERENT FORMS\n\n";
+	{
+		std::cout << "10." << std::endl;
+		Bureaucrat b1("Johnny", 150);
+		Bureaucrat b2("Joe", 1);
+		PresidentialPardonForm f1("Your dad10");
+		b2.signForm(f1);
+		f1.execute(b2);
+		std::cout << std::endl;
+	}
 
-    std::cout << "7." << std::endl;
-    try{
-        Bureaucrat b1("Johnny", 160);
-        Form f1("Formulaire", 150, 5);
-        b1.signForm(f1);
-        std::cout << "Success: " << b1 << " " << f1 << std::endl;
-    }catch (std::exception &e){
-        std::cout << "Exception: " << e.what() << std::endl;
-    }
+	{
+		std::cout << "11." << std::endl;
+		Bureaucrat b1("Johnny", 150);
+		Bureaucrat b2("Joe", 1);
+		PresidentialPardonForm f1("Your dad11");
+		b2.signForm(f1);
+		f1.execute(b1);
+		std::cout << std::endl;
+	}
 
-    std::cout << "8." << std::endl;
-    try{
-        Bureaucrat b1("Johnny", 150);
-        Form f1("Formulaire", 150, 5);
-        b1.signForm(f1);
-        Form f2("Formulaire", 149, 5);
-        b1.signForm(f2);
-        std::cout << "Success: " << b1 << " " << f1 << " " << f2 << std::endl;
-    }catch (std::exception &e){
-        std::cout << "Exception: " << e.what() << std::endl;
-    }
+	{
+		std::cout << "12." << std::endl;
+		Bureaucrat b1("Johnny", 150);
+		Bureaucrat b2("Joe", 1);
+		PresidentialPardonForm f1("Your dad12");
+		b1.signForm(f1);
+		f1.execute(b1);
+		std::cout << std::endl;
+	}
 
-    std::cout << "9." << std::endl;
-    try{
-        Bureaucrat b1("Johnny", 160);
-        Form f1("Formulaire", 150, 5);
-        f1.beSigned(b1);
-        std::cout << "Success: " << b1 << " " << f1 << std::endl;
-    }catch (std::exception &e){
-        std::cout << "Exception: " << e.what() << std::endl;
-    }
+	{
+		std::cout << "13." << std::endl;
+		Bureaucrat b1("Johnny", 150);
+		Bureaucrat b2("Joe", 1);
+		RobotomyRequestForm f1("Your dad13");
+		b2.signForm(f1);
+		f1.execute(b2);
+		std::cout << std::endl;
+	}
 
+	{
+		std::cout << "14." << std::endl;
+		Bureaucrat b1("Johnny", 150);
+		Bureaucrat b2("Joe", 1);
+		RobotomyRequestForm f1("Your dad14");
+		b2.signForm(f1);
+		f1.execute(b1);
+		std::cout << std::endl;
+	}
+
+	{
+		std::cout << "15." << std::endl;
+		Bureaucrat b1("Johnny", 150);
+		Bureaucrat b2("Joe", 1);
+		RobotomyRequestForm f1("Your dad15");
+		b1.signForm(f1);
+		f1.execute(b1);
+		std::cout << std::endl;
+	}
+
+	{
+		std::cout << "16." << std::endl;
+		Bureaucrat b1("Johnny", 150);
+		Bureaucrat b2("Joe", 1);
+		ShrubberyCreationForm f1("Your_dad16");
+		b2.signForm(f1);
+		f1.execute(b2);
+		std::cout << std::endl;
+	}
+
+	{
+		std::cout << "16 bis." << std::endl;
+		Bureaucrat b1("Johnny", 150);
+		Bureaucrat b2("Joe", 1);
+		ShrubberyCreationForm f1("Your_dad16_bis");
+		b2.signForm(f1);
+		f1.execute(b2);
+		std::cout << std::endl;
+	}
+
+	{
+		std::cout << "17." << std::endl;
+		Bureaucrat b1("Johnny", 150);
+		Bureaucrat b2("Joe", 1);
+		ShrubberyCreationForm f1("Your dad17");
+		b2.signForm(f1);
+		f1.execute(b1);
+		std::cout << std::endl;
+	}
+
+	{
+		std::cout << "18." << std::endl;
+		Bureaucrat b1("Johnny", 150);
+		ShrubberyCreationForm f1("Your dad18");
+		b1.signForm(f1);
+		f1.execute(b1);
+	} 
 	return	0;
 }

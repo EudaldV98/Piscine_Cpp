@@ -6,7 +6,7 @@
 #    By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/26 16:25:58 by jvaquer           #+#    #+#              #
-#    Updated: 2021/01/18 13:25:25 by jvaquer          ###   ########.fr        #
+#    Updated: 2021/01/19 12:54:16 by jvaquer          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,9 +16,9 @@ C++ =	clang++
 
 FLAG =	-Wall -Werror -Wextra
 
-SRC =	Bureaucrat.cpp Form.cpp main.cpp
+SRC =	Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp main.cpp 
 
-OBJ =	Bureaucrat.o Form.o main.o
+OBJ =	Bureaucrat.o Form.o ShrubberyCreationForm.o PresidentialPardonForm.o RobotomyRequestForm.o main.o
 
 all : $(NAME)
 
