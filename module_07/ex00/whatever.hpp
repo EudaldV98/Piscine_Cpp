@@ -1,0 +1,40 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   whatever.hpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jvaquer <jvaquer@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/23 11:29:02 by jvaquer           #+#    #+#             */
+/*   Updated: 2021/01/23 12:20:41 by jvaquer          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef WHATEVER_HPP
+# define WHATEVER_HPP
+
+# include <iostream>
+# include <string>
+
+template <typename T>
+T		max(const T&a, const T&b)
+{
+	return	(a > b ? a : b);
+}
+
+template <typename T>
+T		min(const T&a, const T&b)
+{
+	return	(a < b ? a : b);
+}
+
+template <typename T>
+void	swap(T &a, T &b)
+{
+	T	c = a;
+
+	a = b;
+	b = c;
+}
+
+#endif
